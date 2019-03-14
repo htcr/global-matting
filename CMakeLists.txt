@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project( GlobalMatting )
+find_package( OpenCV REQUIRED )
+add_executable(globalmatting main.cpp globalmatting.cpp guidedfilter.cpp)
+target_link_libraries( globalmatting ${OpenCV_LIBS} )
